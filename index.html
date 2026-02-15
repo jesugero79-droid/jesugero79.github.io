@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nos casamos</title>
+<title>Te amo mucho mi amor</title>
 
 <style>
 body{
@@ -17,7 +17,7 @@ body{
     margin-top: 40px;
 }
 
-/* 💖 Botón romántico más grande */
+/* Botón romántico más grande */
 #siBtn{
     padding: 18px 40px;
     font-size: 26px;
@@ -35,7 +35,7 @@ body{
     transform: scale(1.1);
 }
 
-/* 🔥 Ajuste de GIF */
+/* Ajuste de GIF */
 #gifContainer img,
 #happyGifContainer img,
 #happyGifContainer2 img,
@@ -48,7 +48,7 @@ body{
     box-shadow: 0 0 20px #ff69b4;
 }
 
-/* 📱 celular */
+/* celular */
 @media (max-width: 600px) {
     #gifContainer img,
     #happyGifContainer img,
@@ -59,7 +59,7 @@ body{
     }
 }
 
-/* 💕 Galería con bordes románticos */
+/* Galería con bordes románticos */
 .galeria{
     display: flex;
     justify-content: center;
@@ -89,7 +89,7 @@ body{
     }
 }
 
-/* 💖 corazones flotantes */
+/* corazones flotantes */
 .heart{
     position: fixed;
     bottom: -50px;
@@ -169,14 +169,14 @@ body{
 </div>
 </div>
 
-<h1 id="question">¿Quieres casarte conmigo?</h1>
+<h1 id="question">filiz sanvalentin amor </h1>
 
-<button id="siBtn">Sí 💍</button>
+<button id="siBtn">te amo mucho mi amor </button>
 
 </div>
 
 <script>
-/* 💖 corazones flotantes */
+/* corazones flotantes */
 setInterval(()=>{
     let heart = document.createElement("div");
     heart.className = "heart";
@@ -194,28 +194,37 @@ setInterval(()=>{
 let etapa = 0;
 
 document.getElementById('siBtn').addEventListener('click', function(){
+    etapa++;
 
-etapa++;
+    // Ocultamos todos los contenedores primero para limpiar la pantalla
+    document.getElementById('gifContainer').style.display = "none";
+    document.getElementById('happyGifContainer').style.display = "none";
+    document.getElementById('happyGifContainer2').style.display = "none";
+    document.getElementById('happyGifContainer3').style.display = "none";
+    document.getElementById('happyGifContainer4').style.display = "none";
 
-document.getElementById('gifContainer').style.display = "none";
-
-if(etapa === 1){
-document.getElementById('happyGifContainer').style.display = "block";
-}
-else if(etapa === 2){
-document.getElementById('happyGifContainer').style.display = "none";
-document.getElementById('happyGifContainer2').style.display = "block";
-}
-else if(etapa === 3){
-document.getElementById('happyGifContainer2').style.display = "none";
-document.getElementById('happyGifContainer3').style.display = "block";
-}
-else if(etapa === 4){
-document.getElementById('happyGifContainer3').style.display = "none";
-document.getElementById('happyGifContainer4').style.display = "block";
-document.getElementById('question').innerHTML =
-"Sabía que dirías que sí ❤️";
-}
+    if(etapa === 1){
+        document.getElementById('happyGifContainer').style.display = "block";
+        document.getElementById('question').innerHTML = "AMOR eres mi persersona especiel";
+    }
+    else if(etapa === 2){
+        document.getElementById('happyGifContainer2').style.display = "block";
+        document.getElementById('question').innerHTML = "todos los dias espero el momento para verte :)";
+    }
+    else if(etapa === 3){
+        document.getElementById('happyGifContainer3').style.display = "block";
+        document.getElementById('question').innerHTML = "El tiempo que paso contigo es especial, todos los momentos son maravillosos a tu lado";
+    }
+    else if(etapa === 4){
+        document.getElementById('happyGifContainer4').style.display = "block";
+        document.getElementById('question').innerHTML = "y muy pronto te vy a hacer un caballerito :3";
+    }
+    else {
+        // REINICIO AL PRINCIPIO
+        etapa = 0; // Volvemos el contador a cero
+        document.getElementById('gifContainer').style.display = "block"; // Mostramos la primera escena
+        document.getElementById('question').innerHTML = "filiz sanvalentin amor"; // Título original
+    }
 });
 </script>
 
