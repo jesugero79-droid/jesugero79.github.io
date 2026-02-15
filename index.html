@@ -86,16 +86,25 @@
             document.getElementById('gifContainer').style.display = "none";
             if(etapa === 1){
                 document.getElementById('happyGifContainer').style.display = "block";
+                 document.getElementById('question').innerHTML = "AMOR eres mi persersona especiel";
             } else if(etapa === 2){
                 document.getElementById('happyGifContainer').style.display = "none";
                 document.getElementById('happyGifContainer2').style.display = "block";
+                 document.getElementById('question').innerHTML = "todos los dias espero el momento para verte :)";
             } else if(etapa === 3){
                 document.getElementById('happyGifContainer2').style.display = "none";
                 document.getElementById('happyGifContainer3').style.display = "block";
+                 document.getElementById('question').innerHTML = "El tiempo que paso contigo es especial, todos los momentos son maravillosos a tu lado";
             } else if(etapa === 4){
                 document.getElementById('happyGifContainer3').style.display = "none";
                 document.getElementById('happyGifContainer4').style.display = "block";
-                document.getElementById('question').innerHTML = "Sabía que dirías que sí ❤️";
+                 document.getElementById('question').innerHTML = "y muy pronto te vy a hacer un caballerito :3";
+            else {
+        // REINICIO AL PRINCIPIO
+        etapa = 0; // Volvemos el contador a cero
+        document.getElementById('gifContainer').style.display = "block"; // Mostramos la primera escena
+        document.getElementById('question').innerHTML = "filiz sanvalentin amor"; // Título original
+    }
             }
         });
     </script>
