@@ -1,112 +1,223 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nos casamos</title>
-    <style>
-        body { background: linear-gradient(to bottom, #ffe6f0, #fff0f5); font-family: Arial, sans-serif; text-align: center; overflow-x: hidden; }
-        .container { margin-top: 40px; }
-        #siBtn { padding: 18px 40px; font-size: 26px; margin: 20px; cursor: pointer; border-radius: 18px; border: 3px solid #ff1493; background: linear-gradient(45deg,#ff69b4,#ff1493); color: white; box-shadow: 0 0 15px pink; transition: 0.3s; }
-        #siBtn:hover { transform: scale(1.1); }
-        #gifContainer img, #happyGifContainer img, #happyGifContainer2 img, #happyGifContainer3 img, #happyGifContainer4 img { width: 320px; max-width: 90%; height: auto; border-radius: 20px; box-shadow: 0 0 20px #ff69b4; }
-        .galeria { display: flex; justify-content: center; gap: 12px; margin-top: 18px; flex-wrap: wrap; }
-        .galeria img { width: 120px; height: 150px; object-fit: cover; border-radius: 18px; border: 3px solid #ff69b4; box-shadow: 0 0 15px #ffb6c1; transition: 0.3s; }
-        .heart { position: fixed; bottom: -50px; font-size: 24px; animation: floatUp 6s linear infinite; opacity: 0.7; }
-        @keyframes floatUp { 0% { transform: translateY(0); opacity: 0; } 50% { opacity: 1; } 100% { transform: translateY(-110vh); opacity: 0; } }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div id="gifContainer">
-            <img src="https://i.pinimg.com/736x/d1/b2/09/d1b209ce0dbda08cd0bf26a2bcd8ea2c.jpg">
-            <div class="galeria">
-                <img src="https://github.com/jesugero79-droid/jesugero79.github.io/blob/main/imagene/foto1.jpeg?raw=true">
-                <img src="https://github.com/jesugero79-droid/jesugero79.github.io/blob/main/imagene/foto2.jpeg?raw=true">
-                <img src="https://github.com/jesugero79-droid/jesugero79.github.io/blob/main/imagene/foto3.jpeg?raw=true">
-            </div>
-        </div>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nos casamos</title>
 
-        <div id="happyGifContainer" style="display: none;">
-            <img src="https://github.com/Ronald1234-2/musica/blob/main/mocha5final.gif?raw=true">
-            <div class="galeria">
-                <img src="https://github.com/jesugero79-droid/jesugero79.github.io/blob/main/imagene/foto4.jpeg?raw=true">
-                <img src="https://github.com/jesugero79-droid/jesugero79.github.io/blob/main/imagene/foto5.jpeg?raw=true">
-                <img src="https://github.com/jesugero79-droid/jesugero79.github.io/blob/main/imagene/foto6.jpeg?raw=true">
-            </div>
-        </div>
+<style>
+body{
+    background: linear-gradient(to bottom, #ffe6f0, #fff0f5);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    overflow-x: hidden;
+}
 
-        <div id="happyGifContainer2" style="display: none;">
-            <img src="https://github.com/Ronald1234-2/musica/blob/main/mocha6final.gif?raw=true">
-            <div class="galeria">
-                <img src="https://github.com/jesugero79-droid/jesugero79.github.io/blob/main/imagene/foto7.jpeg?raw=true">
-                <img src="https://github.com/jesugero79-droid/jesugero79.github.io/blob/main/imagene/foto8.jpeg?raw=true">
-                <img src="https://github.com/jesugero79-droid/jesugero79.github.io/blob/main/imagene/foto9.jpeg?raw=true">
-            </div>
-        </div>
+.container{
+    margin-top: 40px;
+}
 
-        <div id="happyGifContainer3" style="display: none;">
-            <img src="https://github.com/Ronald1234-2/musica/blob/main/mocha7final.gif?raw=true">
-            <div class="galeria">
-                <img src="https://github.com/jesugero79-droid/jesugero79.github.io/blob/main/imagene/foto10.jpeg?raw=true">
-                <img src="https://github.com/jesugero79-droid/jesugero79.github.io/blob/main/imagene/foto11.jpeg?raw=true">
-                <img src="https://github.com/jesugero79-droid/jesugero79.github.io/blob/main/imagene/foto12.jpeg?raw=true">
-            </div>
-        </div>
+/* 💖 Botón romántico más grande */
+#siBtn{
+    padding: 18px 40px;
+    font-size: 26px;
+    margin: 20px;
+    cursor: pointer;
+    border-radius: 18px;
+    border: 3px solid #ff1493;
+    background: linear-gradient(45deg,#ff69b4,#ff1493);
+    color: white;
+    box-shadow: 0 0 15px pink;
+    transition: 0.3s;
+}
 
-        <div id="happyGifContainer4" style="display: none;">
-            <img src="https://github.com/Ronald1234-2/musica/blob/main/mocha9final.gif?raw=true">
-            <div class="galeria">
-                <img src="https://github.com/jesugero79-droid/jesugero79.github.io/blob/main/imagene/foto13.jpeg?raw=true">
-                <img src="https://github.com/jesugero79-droid/jesugero79.github.io/blob/main/imagene/foto14.jpeg?raw=true">
-                <img src="https://github.com/jesugero79-droid/jesugero79.github.io/blob/main/imagene/foto15.jpeg?raw=true">
-                <img src="https://github.com/jesugero79-droid/jesugero79.github.io/blob/main/imagene/foto16.jpeg?raw=true">
-                <img src="https://github.com/jesugero79-droid/jesugero79.github.io/blob/main/imagene/foto17.jpeg?raw=true">
-            </div>
-        </div>
+#siBtn:hover{
+    transform: scale(1.1);
+}
 
-        <h1 id="question">¿Quieres casarte conmigo?</h1>
-        <button id="siBtn">Sí 💍</button>
-    </div>
+/* 🔥 Ajuste de GIF */
+#gifContainer img,
+#happyGifContainer img,
+#happyGifContainer2 img,
+#happyGifContainer3 img,
+#happyGifContainer4 img {
+    width: 320px;
+    max-width: 90%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #ff69b4;
+}
 
-    <script>
-        setInterval(()=>{
-            let heart = document.createElement("div");
-            heart.className = "heart";
-            heart.innerHTML = "💖";
-            heart.style.left = Math.random()*100 + "vw";
-            heart.style.fontSize = (20 + Math.random()*20) + "px";
-            document.body.appendChild(heart);
-            setTimeout(()=> heart.remove(), 6000);
-        }, 400);
-
-        let etapa = 0;
-        document.getElementById('siBtn').addEventListener('click', function(){
-            etapa++;
-            document.getElementById('gifContainer').style.display = "none";
-            if(etapa === 1){
-                document.getElementById('happyGifContainer').style.display = "block";
-                 document.getElementById('question').innerHTML = "AMOR eres mi persersona especiel";
-            } else if(etapa === 2){
-                document.getElementById('happyGifContainer').style.display = "none";
-                document.getElementById('happyGifContainer2').style.display = "block";
-                 document.getElementById('question').innerHTML = "todos los dias espero el momento para verte :)";
-            } else if(etapa === 3){
-                document.getElementById('happyGifContainer2').style.display = "none";
-                document.getElementById('happyGifContainer3').style.display = "block";
-                 document.getElementById('question').innerHTML = "El tiempo que paso contigo es especial, todos los momentos son maravillosos a tu lado";
-            } else if(etapa === 4){
-                document.getElementById('happyGifContainer3').style.display = "none";
-                document.getElementById('happyGifContainer4').style.display = "block";
-                 document.getElementById('question').innerHTML = "y muy pronto te vy a hacer un caballerito :3";
-            else {
-        // REINICIO AL PRINCIPIO
-        etapa = 0; // Volvemos el contador a cero
-        document.getElementById('gifContainer').style.display = "block"; // Mostramos la primera escena
-        document.getElementById('question').innerHTML = "filiz sanvalentin amor"; // Título original
+/* 📱 celular */
+@media (max-width: 600px) {
+    #gifContainer img,
+    #happyGifContainer img,
+    #happyGifContainer2 img,
+    #happyGifContainer3 img,
+    #happyGifContainer4 img {
+        width: 240px;
     }
-            }
-        });
-    </script>
+}
+
+/* 💕 Galería con bordes románticos */
+.galeria{
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 18px;
+    flex-wrap: wrap;
+}
+
+.galeria img{
+    width: 120px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 18px;
+    border: 3px solid #ff69b4;
+    box-shadow: 0 0 15px #ffb6c1;
+    transition: 0.3s;
+}
+
+.galeria img:hover{
+    transform: scale(1.1);
+}
+
+@media (max-width:600px){
+    .galeria img{
+        width: 95px;
+        height: 120px;
+    }
+}
+
+/* 💖 corazones flotantes */
+.heart{
+    position: fixed;
+    bottom: -50px;
+    font-size: 24px;
+    animation: floatUp 6s linear infinite;
+    opacity: 0.7;
+}
+
+@keyframes floatUp{
+    0%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-110vh);
+        opacity: 0;
+    }
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<div id="gifContainer">
+<img src="https://i.pinimg.com/736x/d1/b2/09/d1b209ce0dbda08cd0bf26a2bcd8ea2c.jpg">
+
+<div class="galeria">
+<img src="https://github.com/jesugero79-droid/jesugero79.github.io/blob/main/imagene/foto1.jpeg?raw=true">
+<img src="https://github.com/jesugero79-droid/jesugero79.github.io/blob/main/imagene/foto2.jpeg?raw=true">
+<img src="https://github.com/jesugero79-droid/jesugero79.github.io/blob/main/imagene/foto3.jpeg?raw=true">
+</div>
+</div>
+
+<div id="happyGifContainer" style="display: none;">
+<img src="https://github.com/Ronald1234-2/musica/blob/main/mocha5final.gif?raw=true">
+
+<div class="galeria">
+<img src="https://github.com/jesugero79-droid/jesugero79.github.io/blob/main/imagene/foto4.jpeg?raw=true">
+<img src="https://github.com/jesugero79-droid/jesugero79.github.io/blob/main/imagene/foto5.jpeg?raw=true">
+<img src="https://github.com/jesugero79-droid/jesugero79.github.io/blob/main/imagene/foto6.jpeg?raw=true">
+</div>
+</div>
+
+<div id="happyGifContainer2" style="display: none;">
+<img src="https://github.com/Ronald1234-2/musica/blob/main/mocha6final.gif?raw=true">
+
+<div class="galeria">
+<img src="https://github.com/jesugero79-droid/jesugero79.github.io/blob/main/imagene/foto7.jpeg?raw=true">
+<img src="https://github.com/jesugero79-droid/jesugero79.github.io/blob/main/imagene/foto8.jpeg?raw=true">
+<img src="https://github.com/jesugero79-droid/jesugero79.github.io/blob/main/imagene/foto9.jpeg?raw=true">
+</div>
+</div>
+
+<div id="happyGifContainer3" style="display: none;">
+<img src="https://github.com/Ronald1234-2/musica/blob/main/mocha7final.gif?raw=true">
+
+<div class="galeria">
+<img src="https://github.com/jesugero79-droid/jesugero79.github.io/blob/main/imagene/foto10.jpeg?raw=true">
+<img src="https://github.com/jesugero79-droid/jesugero79.github.io/blob/main/imagene/foto11.jpeg?raw=true">
+<img src="https://github.com/jesugero79-droid/jesugero79.github.io/blob/main/imagene/foto12.jpeg?raw=true">
+</div>
+</div>
+
+<div id="happyGifContainer4" style="display: none;">
+<img src="https://github.com/Ronald1234-2/musica/blob/main/mocha9final.gif?raw=true">
+
+<div class="galeria">
+<img src="https://github.com/jesugero79-droid/jesugero79.github.io/blob/main/imagene/foto13.jpeg?raw=true">
+<img src="https://github.com/jesugero79-droid/jesugero79.github.io/blob/main/imagene/foto14.jpeg?raw=true">
+<img src="https://github.com/jesugero79-droid/jesugero79.github.io/blob/main/imagene/foto15.jpeg?raw=true">
+<img src="https://github.com/jesugero79-droid/jesugero79.github.io/blob/main/imagene/foto16.jpeg?raw=true">
+<img src="https://github.com/jesugero79-droid/jesugero79.github.io/blob/main/imagene/foto17.jpeg?raw=true">
+</div>
+</div>
+
+<h1 id="question">¿Quieres casarte conmigo?</h1>
+
+<button id="siBtn">Sí 💍</button>
+
+</div>
+
+<script>
+/* 💖 corazones flotantes */
+setInterval(()=>{
+    let heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "💖";
+    heart.style.left = Math.random()*100 + "vw";
+    heart.style.fontSize = (20 + Math.random()*20) + "px";
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },6000);
+},400);
+
+/* escenas felices */
+let etapa = 0;
+
+document.getElementById('siBtn').addEventListener('click', function(){
+
+etapa++;
+
+document.getElementById('gifContainer').style.display = "none";
+
+if(etapa === 1){
+document.getElementById('happyGifContainer').style.display = "block";
+}
+else if(etapa === 2){
+document.getElementById('happyGifContainer').style.display = "none";
+document.getElementById('happyGifContainer2').style.display = "block";
+}
+else if(etapa === 3){
+document.getElementById('happyGifContainer2').style.display = "none";
+document.getElementById('happyGifContainer3').style.display = "block";
+}
+else if(etapa === 4){
+document.getElementById('happyGifContainer3').style.display = "none";
+document.getElementById('happyGifContainer4').style.display = "block";
+document.getElementById('question').innerHTML =
+"Sabía que dirías que sí ❤️";
+}
+});
+</script>
+
 </body>
 </html>
